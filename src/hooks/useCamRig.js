@@ -11,7 +11,7 @@ function useCamRig () {
     useEffect(() => {
         rig.add(camera)
         camera.position.set(0, 3, -10)
-        camera.lookAt(rig.position)
+        camera.lookAt(rig.position.clone().add(new THREE.Vector3(0,2,5)))
     },[])
 
     useFrame(() => {

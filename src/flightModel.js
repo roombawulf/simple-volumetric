@@ -6,7 +6,7 @@ const RIGHT = new THREE.Vector3(1,0,0)
 const FORWARD = new THREE.Vector3(0,0,1)
 
 // world parameters
-const GRAVITY = 4.9
+const GRAVITY = 9.81
 
 // plane parameters
 const MASS = 100
@@ -41,16 +41,16 @@ export function flightModel (plane, controls, delta) {
     const aoa = Math.atan2( velocity.y, velocity.z )
 
     if ( controls.PITCH_UP ) {
-        plane.rotateX(-Math.PI * 0.3 * delta)
+        plane.rotateX(-Math.PI / 6 * delta)
     }
     if ( controls.PITCH_DOWN ) {
-        plane.rotateX(Math.PI * 0.3 * delta)
+        plane.rotateX(Math.PI / 6 * delta)
     }
     if ( controls.ROLL_LEFT ) {
-        plane.rotateZ(-Math.PI * 0.4 * delta)
+        plane.rotateZ(-Math.PI / 4 * delta)
     }
     if ( controls.ROLL_RIGHT ) {
-        plane.rotateZ(Math.PI * 0.4 * delta)
+        plane.rotateZ(Math.PI / 4 * delta)
     }
 
     // auto yaw

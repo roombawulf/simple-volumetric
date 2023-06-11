@@ -17,7 +17,7 @@ function Player () {
         flightModel(player.current, controls, delta)
 
         const dt1 = 1 - Math.exp(-50 * delta)
-        const dt2 = 1 - Math.exp(-20 * delta)
+        const dt2 = 1 - Math.exp(-2 * delta)
         // camRig.position.copy(player.current.position)
 
         camRig.position.lerp(player.current.position, dt1)
