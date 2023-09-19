@@ -4,7 +4,7 @@ import Clouds from "./Clouds";
 
 function App() {
     return (
-        <Canvas>
+        <Canvas dpr={1.0}>
             <Clouds />
             <OrbitControls />
 
