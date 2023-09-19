@@ -1,8 +1,8 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
-
-    background-color: rgb(18, 18, 18);
+    background-color: #9d9d9d;
 }
 
 #root {
